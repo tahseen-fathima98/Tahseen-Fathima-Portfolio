@@ -89,7 +89,7 @@ const Footer = () => (
       <IconLink href="https://codepen.io/makoto56" target="_blank" data-title="CodePen">
         <FaCodepen />
       </IconLink>
-      <IconLink href="https://github.com/fugi98" target="_blank" data-title="GitHub">
+      <IconLink href="https://github.com/tahseen-fathima98" target="_blank" data-title="GitHub">
         <FaGithub />
       </IconLink>
       <IconLink href="https://www.linkedin.com/in/tahseen-fathima/" target="_blank" data-title="LinkedIn">
