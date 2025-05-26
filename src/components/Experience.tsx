@@ -17,7 +17,7 @@ const experiences: Experience[] = [
     duration: "Dec 2024 – Present",
     location: "Remote",
     description:
-      "Part of the founding team building an AI-powered hiring platform from the ground up using React, TypeScript, and Tailwind. Led the frontend architecture and helped ship the first version. Working closely with backend and AI engineers to shape features. Also building an internal dashboard (Pillar Bridge) where I’m handling both backend and frontend — integrating filters, export options, and automating manual workflows. More updates coming as the product grows.",
+      "Leading UI for a new AI-based hiring platform using React, TypeScript, and Tailwind. Contributing to fullstack development for an internal tool to automate workflows.",
   },
   {
     title: "Freelance Website Developer",
@@ -74,6 +74,11 @@ const ExperienceSection = () => {
     <section className={styles.experienceSection}>
       <div className={styles.container}>
         <h2 className={styles.sectionTitle}>Experience</h2>
+        <div className={styles.experienceIntro}>
+          <p className={styles.description}>
+            Currently working as a Frontend Developer at FinnAI (since Dec 2024), contributing to both product UI and internal tooling.
+          </p>
+        </div>
         <div className={styles.timeline}>
           {experiences.map((exp, index) => (
             <div
