@@ -93,7 +93,7 @@ const ExperienceSection = () => {
           ))}
         </div>
         <a
-          href="/pdf/Resume.pdf"
+          href="/pdf/Tahseen-Fathima Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.resumeButton}
