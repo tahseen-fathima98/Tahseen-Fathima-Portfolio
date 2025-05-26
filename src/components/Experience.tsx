@@ -12,12 +12,20 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
+    title: "Frontend Developer — Founding Team",
+    company: "FinnAI",
+    duration: "Dec 2024 – Present",
+    location: "Remote",
+    description:
+      "Part of the founding team building an AI-powered hiring platform from the ground up using React, TypeScript, and Tailwind. Led the frontend architecture and helped ship the first version. Working closely with backend and AI engineers to shape features. Also building an internal dashboard (Pillar Bridge) where I’m handling both backend and frontend — integrating filters, export options, and automating manual workflows. More updates coming as the product grows.",
+  },
+  {
     title: "Freelance Website Developer",
     company: "BrandOverMoon",
     duration: "Jan - Apr 2022",
     location: "Remote, India",
     description:
-      "Developed and designed websites for clients. Managed and updated the main company website. Interacted with clients twice a week to update them on project progress.",
+      "Created clean, responsive websites for clients. Handled both design and development. Regularly collaborated with clients to refine features and update their company’s main site.",
   },
   {
     title: "Junior Front End Developer",
@@ -25,7 +33,7 @@ const experiences: Experience[] = [
     duration: "Sep - Dec 2021",
     location: "Remote, India",
     description:
-      "Developed and designed an interactive official website using PHP. Worked on other development-stage projects. Initially joined as an intern but later became a full-time part of the company.",
+      "Redesigned and developed the company’s official site using PHP. Contributed to other in-development projects. Started as an intern and was promoted to full-time based on performance.",
   },
   {
     title: "Front End Developer Intern",
@@ -33,7 +41,7 @@ const experiences: Experience[] = [
     duration: "July - Sep 2021",
     location: "Remote, India",
     description:
-      "Improved the official website, enhancing interactivity and SEO. Assisted in backend development and dynamic website features. Created UI/UX post designs for social media.",
+      "Helped revamp the official website, improved SEO, and added interactivity. Assisted in backend features for a more dynamic experience. Also designed UI/UX posts for social media.",
   },
   {
     title: "Web Development Intern",
@@ -41,7 +49,7 @@ const experiences: Experience[] = [
     duration: "Mar - May 2021",
     location: "Remote, India",
     description:
-      "Assisted in improving and completing the official website. Mentored students in their web development course.",
+      "Supported the completion and enhancement of the company website. Also mentored students during web development courses.",
   },
   {
     title: "Frontend Developer Intern",
@@ -49,7 +57,7 @@ const experiences: Experience[] = [
     duration: "Nov 2020 - Feb 2021",
     location: "Remote, India",
     description:
-      "Developed and maintained the official website using HTML, CSS, Sass, JavaScript, and jQuery. Tested for cross-browser compatibility, mobile responsiveness, and SEO.",
+      "Maintained and updated the company’s main site using HTML, CSS, Sass, JavaScript, and jQuery. Focused on making the site mobile-friendly, SEO-optimized, and compatible across browsers.",
   },
   {
     title: "Frontend Developer Intern",
@@ -57,7 +65,7 @@ const experiences: Experience[] = [
     duration: "Nov 2019 - Feb 2020",
     location: "Jamshedpur, India",
     description:
-      "Developed and designed a help center website using .Net. Tested for compatibility, mobile responsiveness, and SEO.",
+      "Designed and built a help center website using .Net. Ensured the design was clean, responsive, and easy to navigate across devices and browsers.",
   },
 ];
 
@@ -66,11 +74,6 @@ const ExperienceSection = () => {
     <section className={styles.experienceSection}>
       <div className={styles.container}>
         <h2 className={styles.sectionTitle}>Experience</h2>
-        <div className={styles.experienceIntro}>
-          <p className={styles.description}>
-            Presently I am working as a freelancer from March 2023.
-          </p>
-        </div>
         <div className={styles.timeline}>
           {experiences.map((exp, index) => (
             <div
@@ -98,7 +101,7 @@ const ExperienceSection = () => {
           rel="noopener noreferrer"
           className={styles.resumeButton}
         >
-         View Resume
+          View Resume
         </a>
       </div>
     </section>
