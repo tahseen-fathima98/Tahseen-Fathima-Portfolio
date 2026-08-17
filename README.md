@@ -1,6 +1,6 @@
 # Tahseen Fathima Portfolio V2
 
-Standard Next.js App Router + TypeScript project. It does not use Vite, Vinext, Wrangler, or Cloudflare-specific development commands.
+Next.js App Router + TypeScript project.
 
 ## Run locally on Windows, macOS, or Linux
 
