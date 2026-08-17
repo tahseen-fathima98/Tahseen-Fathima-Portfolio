@@ -694,6 +694,10 @@ button {
   font: 600 clamp(32px, 4vw, 63px)/0.96 var(--font-display);
   margin: 25px 0;
 }
+.intro-card h2.font-md {
+  font-size: clamp(25px, 3vw, 42px);
+  line-height: 1.05;
+}
 .intro-card h2 em,
 .connect-copy h2 em {
   font-weight: 500;
@@ -2333,9 +2337,6 @@ footer { width: min(90%, 1480px); margin-inline: auto; }
     font-size: 10px;
     line-height: 1.35;
   }
-  .journey-layout .role-projects {
-    display: none;
-  }
   .metrics {
     min-height: 0;
     grid-template-rows: 1fr 1fr;
@@ -3198,6 +3199,16 @@ footer { width: min(90%, 1480px); margin-inline: auto; }
 .site .experience-detail {
   padding: 22px 26px;
   overflow: auto;
+}
+
+@media (min-width: 1101px) {
+  .site .journey-layout {
+    height: 345px;
+  }
+  .site .journey-layout .experience-detail {
+    height: 100%;
+    overflow-y: auto;
+  }
 }
 
 .site .experience-detail h2 {

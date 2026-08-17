@@ -11,7 +11,6 @@ import {
 import {
   Activity,
   ArrowDownToLine,
-  ArrowRight,
   ArrowUpRight,
   Boxes,
   BrainCircuit,
@@ -260,29 +259,99 @@ function AmbientBackground({ active }: { active: ChapterId | null }) {
 
 function ProfilePanel() {
   return (
-    <div className="profile-console">
-      <motion.section className="profile-about" variants={panelVariants} custom={0} initial="hidden" animate="visible">
-        <span className="eyebrow">About me</span>
-        <p>Full stack developer with 5+ years of experience building scalable web applications that solve real problems.</p>
-        <p>Passionate about clean code, performance, and creating delightful user experiences.</p>
-      </motion.section>
-      <div className="profile-stats">
-        {[
-          ["5+", "Years experience"],
-          ["20+", "Projects delivered"],
-          ["10+", "Clients served"],
-        ].map(([value, label], index) => (
-          <motion.div className="profile-stat panel-card" key={label} variants={panelVariants} custom={index + 1} initial="hidden" animate="visible">
-            <strong>{value}</strong><span>{label}</span>
-          </motion.div>
-        ))}
+    <>
+      {/* <div className="profile-console">
+        <motion.section className="profile-about" variants={panelVariants} custom={0} initial="hidden" animate="visible">
+          <span className="eyebrow">About me</span>
+          <p>Full stack developer with 5+ years of experience building scalable web applications that solve real problems.</p>
+          <p>Passionate about clean code, performance, and creating delightful user experiences.</p>
+        </motion.section>
+        <div className="profile-stats">
+          {[
+            ["5+", "Years experience"],
+            ["20+", "Projects delivered"],
+            ["10+", "Clients served"],
+          ].map(([value, label], index) => (
+            <motion.div className="profile-stat panel-card" key={label} variants={panelVariants} custom={index + 1} initial="hidden" animate="visible">
+              <strong>{value}</strong><span>{label}</span>
+            </motion.div>
+          ))}
+        </div>
+        <motion.aside className="profile-availability panel-card" variants={panelVariants} custom={4} initial="hidden" animate="visible">
+          <span className="eyebrow">Availability</span>
+          <p>Available for new opportunities and exciting projects worldwide.</p>
+          <a href="#chapter-connect">Let&apos;s connect <ArrowRight /></a>
+        </motion.aside>
+      </div> */}
+      <div className="profile-grid">
+        <motion.section
+          className="intro-card panel-card"
+          variants={panelVariants}
+          custom={5}
+          initial="hidden"
+          animate="visible"
+        >
+          <span className="eyebrow">Design-minded · Detail-driven</span>
+          <h2 className="font-md">
+            I turn complex product ideas into experiences that feel{" "}
+            <em>effortless.</em>
+          </h2>
+          <p>
+            Full Stack Developer with 5+ years of experience building responsive,
+            high-performance applications with React, Next.js, TypeScript, Node.js
+            and REST APIs. I combine strong frontend architecture with growing
+            backend ownership to deliver complete products.
+          </p>
+          <div className="location">
+            <span className="status-dot" /> Available for global opportunities{" "}
+            <span>Remote · International · Open to relocation</span>
+          </div>
+        </motion.section>
+<div className="profile-stats">
+          {[
+            ["5+", "Years experience"],
+            ["20+", "Projects delivered"],
+            ["10+", "Clients served"],
+          ].map(([value, label], index) => (
+            <motion.div className="profile-stat panel-card" key={label} variants={panelVariants} custom={index + 1} initial="hidden" animate="visible">
+              <strong>{value}</strong><span>{label}</span>
+            </motion.div>
+          ))}
+        </div>
+        <motion.section
+          className="education panel-card"
+          variants={panelVariants}
+          custom={7}
+          initial="hidden"
+          animate="visible"
+        >
+          <span className="eyebrow">Education</span>
+          <div>
+            <strong>Master of Computer Applications</strong>
+            <small>Indira Gandhi National Open University · 2021</small>
+          </div>
+          <div>
+            <strong>Bachelor of Computer Applications</strong>
+            <small>Indira Gandhi National Open University · 2019</small>
+          </div>
+        </motion.section>
+        <motion.section
+          className="certifications panel-card"
+          variants={panelVariants}
+          custom={8}
+          initial="hidden"
+          animate="visible"
+        >
+          <span className="eyebrow">Certifications</span>
+          <ul>
+            <li>Responsive Web Design · freeCodeCamp</li>
+            <li>Data Visualization · freeCodeCamp</li>
+            <li>HTML5 Game from Scratch · Udemy</li>
+            <li>Build a Website with HTML · LinkedIn Learning</li>
+          </ul>
+        </motion.section>
       </div>
-      <motion.aside className="profile-availability panel-card" variants={panelVariants} custom={4} initial="hidden" animate="visible">
-        <span className="eyebrow">Availability</span>
-        <p>Available for new opportunities and exciting projects worldwide.</p>
-        <a href="#chapter-connect">Let&apos;s connect <ArrowRight /></a>
-      </motion.aside>
-    </div>
+    </>
   );
 }
 
@@ -400,9 +469,11 @@ function JourneyPanel() {
           <div className="experience-detail__head">
             <div>
               <h2>{journeyExperience[selected].company}</h2>
+              <h3>{journeyExperience[selected].role}</h3>
               <span className="eyebrow">
                 {journeyExperience[selected].period}
               </span>
+              <p className="place">{journeyExperience[selected].place}</p>
             </div>
             <svg
               className="growth-chart"
