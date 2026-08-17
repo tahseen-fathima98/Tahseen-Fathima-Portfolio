@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const WhatIDoSection = styled.section`
   position: relative;
   padding: 6rem 5rem; /* Increased padding to increase height */
-  background-image: url('./images/what-I-Do-Bg.jpg');
+  background-image: url('/images/what-I-Do-Bg.jpg');
   background-size: cover;
   background-position: center;
   color: white;

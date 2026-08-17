@@ -1,0 +1,33 @@
+.v1-return {
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  z-index: 10000;
+  display: grid;
+  place-items: center;
+  min-width: 86px;
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.82);
+  color: #fff !important;
+  font: 700 12px/1 Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-decoration: none !important;
+  backdrop-filter: blur(10px);
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.v1-return:hover { transform: translateY(-3px); background: #6c5ce7; }
+
+@media (max-width: 480px) {
+  .v1-return {
+    right: 10px;
+    bottom: 10px;
+    min-width: 52px;
+    height: 44px;
+    padding: 0 11px;
+  }
+  .v1-return span { display: none; }
+}

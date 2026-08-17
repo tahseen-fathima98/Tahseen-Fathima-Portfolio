@@ -8,14 +8,12 @@ import Image from 'next/image';
 const AboutSection = styled.section`
   background-color: #1a1a1a;
   color: #f5f5f5;
-  padding: 5rem 2rem;
+  padding: 5rem 4.8rem;
   border-radius: 8px;
-  margin-bottom: 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: auto;
-  margin: 4.5rem 4rem;
   position: relative;
 
   @media (max-width: 768px) {

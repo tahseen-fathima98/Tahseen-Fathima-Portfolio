@@ -14,24 +14,26 @@ const hoverEffect = keyframes`
 `;
 
 const FooterContainer = styled.footer`
-  padding: 4rem 2rem;
+  padding: 1.55rem 2rem;
   text-align: center;
   background: linear-gradient(45deg, #0f6c5a, #1d5a87); /* Darker gradient colors */
   color: white;
   width: 100%;
+  max-width: none;
+  margin: 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @media (max-width: 768px) {
-    padding: 2rem 1rem;
+    padding: 1.25rem 1rem;
   }
 `;
 
 const FooterText = styled.p`
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 
   @media (max-width: 768px) {
     font-size: 1rem;
@@ -54,7 +56,7 @@ const IconContainer = styled.div`
 
 const IconLink = styled.a`
   color: white;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   transition: transform 0.3s ease, color 0.3s ease;
 
   &:hover {

@@ -10,6 +10,7 @@ interface MessageProps {
 
 const FormSection = styled.section`
   position: relative;
+  isolation: isolate;
   padding: 2rem;
   color: white;
   text-align: center;
@@ -152,20 +153,18 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage('');
-    const response = await fetch('/api/send', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
-  
-    if (response.ok) {
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, website: '' }),
+      });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error || result.message || 'Failed to send the message.');
       setResponseMessage('Message sent successfully!');
       setFormData({ name: '', email: '', subject: '', message: '' });
-    } else {
-      const result = await response.json();
-      setErrorMessage(result.message || 'Failed to send the message.');
+    } catch (error) {
+      setErrorMessage(error instanceof Error ? error.message : 'Failed to send the message.');
       setResponseMessage('');
     }
   };

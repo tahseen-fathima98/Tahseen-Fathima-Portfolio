@@ -36,6 +36,7 @@ const HeroSectionContainer = styled.section`
   color: #ecf0f1;
   height: 100vh;
   position: relative;
+  isolation: isolate;
   overflow: hidden;
 
   &::before {
@@ -45,10 +46,10 @@ const HeroSectionContainer = styled.section`
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../images/bg1.png') no-repeat center center;
+    background: url('/images/bg1.png') no-repeat center center;
     background-size: cover;
     opacity: 0.5;
-    z-index: -1;
+    z-index: 0;
   }
 
   &::after {
@@ -105,6 +106,7 @@ const AnimatedImageContainer = styled.div`
   cursor: pointer;
   font-size: 2rem;
   color: #1abc9c;
+  z-index: 2;
   transition: transform 1.6s ease, color 1.6s ease;
 
   &:hover {
