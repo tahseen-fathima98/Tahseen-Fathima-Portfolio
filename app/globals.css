@@ -2818,6 +2818,10 @@ footer { width: min(90%, 1480px); margin-inline: auto; }
   height: auto;
 }
 
+.site .header {
+  z-index: 2;
+}
+
 .site .chapter-progress {
   position: relative;
   width: clamp(126px, 10vw, 156px);
