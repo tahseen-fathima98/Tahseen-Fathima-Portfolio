@@ -1916,7 +1916,7 @@ footer {
   }
 }
 
-/* Approved dimensional-console layout */
+/* Dimensional console layout */
 .site { min-height: 100vh; padding-top: 18px; overflow-x: hidden; }
 .header {
   height: 48px; width: min(94%, 1480px); margin: 0 auto; padding: 0;
@@ -2096,7 +2096,7 @@ footer { width: min(90%, 1480px); margin-inline: auto; }
   footer { width: calc(100% - 28px); }
 }
 
-/* Desktop chapter-console composition from the approved portfolio design. */
+/* Desktop chapter-console composition */
 @media (min-width: 1101px) {
   .header {
     position: absolute;
@@ -2803,9 +2803,7 @@ footer { width: min(90%, 1480px); margin-inline: auto; }
   }
 }
 
-/* ========================================================================== */
-/* V2 FINAL DIMENSIONAL PASS - intentionally scoped to .site; V1 is untouched */
-/* ========================================================================== */
+/* V2 desktop refinements, scoped to .site so the V1 archive page is unaffected */
 .site {
   --v2-body: clamp(14px, 0.86vw, 16px);
   --v2-small: clamp(12px, 0.72vw, 13px);
