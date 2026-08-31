@@ -957,27 +957,32 @@ export default function Portfolio() {
         <div className="availability">
           <span /> Available for global opportunities
         </div>
-        <nav
-          className={menuOpen ? "nav nav--open" : "nav"}
-          aria-label="Main navigation"
-        >
-          {chapters.map((item) => (
-            <button key={item.id} onClick={() => openChapter(item.id, true)}>
-              {item.title}
-            </button>
-          ))}
-        </nav>
-        <div className="header__actions">
-          <MagneticButton href="/Tahseen-Fathima-Resume.pdf" className="resume">
-            Résumé <ArrowDownToLine />
-          </MagneticButton>
-          <MagneticButton
-            href="#chapter-connect"
-            className="contact"
-            onClick={() => openChapter("connect", true)}
+        <div className="header__nav-group">
+          <nav
+            className={menuOpen ? "nav nav--open" : "nav"}
+            aria-label="Main navigation"
           >
-            Contact me <ArrowUpRight />
-          </MagneticButton>
+            {chapters.map((item) => (
+              <button key={item.id} onClick={() => openChapter(item.id, true)}>
+                {item.title}
+              </button>
+            ))}
+          </nav>
+          <div className="header__actions">
+            <MagneticButton
+              href="/Tahseen-Fathima-Resume.pdf"
+              className="resume"
+            >
+              Résumé <ArrowDownToLine />
+            </MagneticButton>
+            <MagneticButton
+              href="#chapter-connect"
+              className="contact"
+              onClick={() => openChapter("connect", true)}
+            >
+              Contact me <ArrowUpRight />
+            </MagneticButton>
+          </div>
         </div>
         <button
           className="menu"
