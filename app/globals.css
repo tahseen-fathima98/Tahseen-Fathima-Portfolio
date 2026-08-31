@@ -298,6 +298,9 @@ button {
 .nav button:hover {
   color: var(--text);
 }
+.header__nav-group {
+  display: contents;
+}
 .header__actions {
   display: flex;
   gap: 10px;
@@ -2094,6 +2097,42 @@ footer { width: min(90%, 1480px); margin-inline: auto; }
   .contact-form { padding: 12px; }
   .archive-teaser { width: calc(100% - 28px); margin-top: 12px; }
   footer { width: calc(100% - 28px); }
+}
+
+/* Mobile: fold Résumé + Contact into the open nav dropdown so they stay reachable */
+@media (max-width: 740px) {
+  .header__nav-group:has(.nav--open) {
+    display: block;
+    position: fixed;
+    inset: 62px 14px auto 14px;
+    z-index: 50;
+    padding: 16px;
+    background: rgba(5, 18, 32, 0.97);
+    border: 1px solid var(--line-strong);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  }
+  .header__nav-group:has(.nav--open) .nav--open {
+    position: static;
+    inset: auto;
+    width: auto;
+    padding: 0;
+    background: none;
+    border: 0;
+    box-shadow: none;
+  }
+  .header__nav-group:has(.nav--open) .header__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+  }
+  .header__nav-group:has(.nav--open) .header__actions a {
+    width: 100%;
+    min-height: 42px;
+    font-size: 9px;
+  }
 }
 
 /* Desktop chapter-console composition */
