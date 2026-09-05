@@ -62,7 +62,7 @@ export const experience = [
     ],
     projects: [
       {
-        name: "Finn — Official AI Hiring Platform",
+        name: "Finn — AI Voice Agent for Enterprises",
         responsibility: "Frontend Developer",
         description:
           "Building responsive product interfaces and reusable frontend systems for an AI-powered hiring platform, collaborating with backend and AI teams to connect production workflows.",
@@ -161,8 +161,8 @@ export const projects = [
   {
     number: "01",
     title: "Finn",
-    type: "AI hiring platform",
-    copy: "Frontend delivery for a responsive AI hiring product, reusable systems and production API-connected workflows.",
+    type: "AI voice agent for enterprises",
+    copy: "Frontend delivery for a responsive AI voice agent, reusable systems and production API-connected workflows.",
     stack: ["Next.js", "TypeScript", "Design system"],
     live: "https://hirefinn.ai",
     code: "https://github.com/tahseen-fathima98",
