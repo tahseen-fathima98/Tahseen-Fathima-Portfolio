@@ -65,7 +65,7 @@ export const experience = [
         name: "Finn — AI Voice Agent for Enterprises",
         responsibility: "Frontend Developer",
         description:
-          "Building responsive product interfaces and reusable frontend systems for an AI-powered hiring platform, collaborating with backend and AI teams to connect production workflows.",
+          "Building responsive product interfaces and reusable frontend systems for an AI-powered voice agent platform for enterprises, collaborating with backend and AI teams to connect production workflows.",
         highlights: [
           "React & Next.js",
           "TypeScript",
