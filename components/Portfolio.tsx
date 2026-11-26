@@ -131,11 +131,13 @@ function MagneticButton({
   href,
   className = "",
   onClick,
+  newTab = false,
 }: {
   children: ReactNode;
   href: string;
   className?: string;
   onClick?: () => void;
+  newTab?: boolean;
 }) {
   const ref = useRef<HTMLAnchorElement>(null);
   const x = useMotionValue(0);
@@ -146,6 +148,7 @@ function MagneticButton({
     <motion.a
       ref={ref}
       href={href}
+      {...(newTab ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       className={`magnetic ${className}`}
       onClick={onClick}
       style={{ x: sx, y: sy }}
@@ -962,15 +965,24 @@ export default function Portfolio() {
             className={menuOpen ? "nav nav--open" : "nav"}
             aria-label="Main navigation"
           >
-            {chapters.map((item) => (
-              <button key={item.id} onClick={() => openChapter(item.id, true)}>
-                {item.title}
-              </button>
-            ))}
+            {chapters.map((item) => {
+              const Icon = item.icon;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => openChapter(item.id, true)}
+                >
+                  <span className="nav__num">{item.number}</span>
+                  <Icon className="nav__icon" aria-hidden="true" />
+                  <span className="nav__label">{item.title}</span>
+                </button>
+              );
+            })}
           </nav>
           <div className="header__actions">
             <MagneticButton
-              href="/Tahseen-Fathima-Resume.pdf"
+              href="/Tahseen%20Fathima.pdf"
+              newTab
               className="resume"
             >
               Résumé <ArrowDownToLine />

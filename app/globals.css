@@ -1936,6 +1936,9 @@ footer {
 .nav--open { display: grid; gap: 4px; }
 .nav button { min-height: 40px; text-align: left; padding: 0 12px; border: 1px solid transparent; background: transparent; text-transform: uppercase; letter-spacing: .14em; font: 9px var(--font-mono); }
 .nav button:hover { border-color: var(--accent); color: var(--accent); }
+.nav button { display: flex; align-items: center; gap: 12px; }
+.nav__num { font-style: italic; font-weight: 700; font-size: 13px; opacity: .7; min-width: 20px; }
+.nav__icon { width: 16px; height: 16px; flex: none; }
 .header__actions { grid-column: 4; display: flex; gap: 10px; }
 .header__actions a { min-height: 40px; padding: 0 22px; font-size: 9px; }
 .menu { grid-column: 5; width: 44px; height: 40px; border: 1px solid var(--line); background: rgba(4,16,29,.62); }
